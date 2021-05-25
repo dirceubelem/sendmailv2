@@ -33,8 +33,7 @@ public class SendMail {
             StringBuilder command = new StringBuilder();
             command.append(String.format(cmd, user, to, temp.getAbsolutePath(), user, password));
 
-            String ret = Execute.command(command.toString());
-            System.out.println(ret);
+            Execute.command(command.toString());
 
             temp.delete();
 
