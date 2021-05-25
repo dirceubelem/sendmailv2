@@ -62,7 +62,7 @@ public class Execute {
     public Process run(String command) {
         Process proc = null;
         try {
-            proc = Runtime.getRuntime().exec(command);
+            proc = Runtime.getRuntime().exec(command.split(" "));
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
             success = false;
